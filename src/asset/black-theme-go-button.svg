@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="235" height="49" viewBox="0 0 235 49">
+    <defs>
+        <path id="b" d="M3.043 0L0 2.386 1.522 4.87v4.073l12.01 8.258v7.064l-3.085 2.466V32.824l3.086 3.078-3.086 1.779 3.086 1.729L10.447 41h147.009L227 39.41v-3.508-3.078-6.092-5.766-1.52l-7.683-2.244c-.254-.112.573-.598 2.48-1.46 2.859-1.292 0-4.52 0-4.52l-2.48-2.278V2.386L221.797 0h-45.322c-4.686 0-20.814.795-48.384 2.386h-24.525L3.043 0z"/>
+        <filter id="a" width="106.2%" height="134.1%" x="-3.1%" y="-12.2%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.0557047062 0 0 0 0 0.0756840583 0 0 0 0 0.943331069 0 0 0 1 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(4 2)">
+            <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+            <use fill="#F50039" xlink:href="#b"/>
+        </g>
+        <text fill="#FFF" font-family="Roboto-Bold, Roboto" font-size="18" font-weight="bold" transform="translate(4 2)">
+            <tspan x="101.156" y="27">GO</tspan>
+        </text>
+    </g>
+</svg>

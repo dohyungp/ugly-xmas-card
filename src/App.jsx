@@ -9,15 +9,18 @@ function useColorTheme() {
   const { colorStore } = rootStore;
 
   return useObserver(() => ({
-    colorTheme: colorStore.getTheme()
+    colorTheme: colorStore.getTheme,
+    goButtonSVG: colorStore.getGoButtonSVG
   }));
 }
 
 function App() {
-  const { colorTheme } = useColorTheme();
+  const { colorTheme, goButtonSVG } = useColorTheme();
   return (
     <ThemeProvider theme={colorTheme}>
-      <Container></Container>
+      <Container>
+        <img src={goButtonSVG} alt="GO" />
+      </Container>
     </ThemeProvider>
   );
 }
