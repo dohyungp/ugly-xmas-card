@@ -9,12 +9,17 @@ import yelloThemeGoButton from "../asset/yellow-theme-go-button.svg";
 import blackThemeGoButton from "../asset/black-theme-go-button.svg";
 
 export default class ColorStore {
-  @observable themeCode = randInt(1, COUNT_OF_THEME);
+  @observable themeCode = parseInt(localStorage.getItem("themeCode"));
   @observable sweaterCode = randInt(1, COUNT_OF_SWEATHER);
   @observable isJump = false;
 
   constructor(rootStore) {
     this.rootStore = rootStore;
+    if (!this.themeCode) {
+      const randCode = randInt(1, COUNT_OF_THEME);
+      this.themeCode = randCode;
+      localStorage.setItem("themeCode", randCode);
+    }
   }
 
   updateThemeCode = action(() => {
