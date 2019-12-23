@@ -1,9 +1,12 @@
-import { observable, action } from "mobx";
+import { observable, action, computed } from "mobx";
 import { COUNT_OF_THEME, COUNT_OF_SWEATHER } from "../utils/constant";
 import { randInt } from "../utils/functions";
 import greenTheme from "../theme/green";
 import blackTheme from "../theme/black";
 import purpleTheme from "../theme/purple";
+import greenThemeGoButton from "../asset/green-theme-go-button.svg";
+import yelloThemeGoButton from "../asset/yellow-theme-go-button.svg";
+import blackThemeGoButton from "../asset/black-theme-go-button.svg";
 
 export default class ColorStore {
   @observable themeCode = randInt(1, COUNT_OF_THEME);
@@ -18,7 +21,8 @@ export default class ColorStore {
     this.themeCode = (this.themeCode + 1) % COUNT_OF_THEME;
   });
 
-  getTheme = action(() => {
+  @computed
+  get getTheme() {
     switch (this.themeCode) {
       case 0:
         return greenTheme;
@@ -29,5 +33,19 @@ export default class ColorStore {
       default:
         return greenTheme;
     }
-  });
+  }
+
+  @computed
+  get getGoButtonSVG() {
+    switch (this.themeCode) {
+      case 0:
+        return greenThemeGoButton;
+      case 1:
+        return yelloThemeGoButton;
+      case 2:
+        return blackThemeGoButton;
+      default:
+        return greenThemeGoButton;
+    }
+  }
 }
