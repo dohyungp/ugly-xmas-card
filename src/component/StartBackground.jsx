@@ -6,6 +6,6 @@ export default styled.div`
   background-position: center top;
   background-repeat: no-repeat;
   background-size: contain;
-  height: 100vh;
+  height: 95vh;
   width: 100%;
 `;
