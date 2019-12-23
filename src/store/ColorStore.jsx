@@ -24,6 +24,8 @@ export default class ColorStore {
 
   updateThemeCode = action(() => {
     this.themeCode = (this.themeCode + 1) % COUNT_OF_THEME;
+    localStorage.removeItem("themeCode");
+    localStorage.setItem("themeCode", this.themeCode);
   });
 
   @computed
