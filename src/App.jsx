@@ -2,7 +2,9 @@ import React from "react";
 import { useObserver } from "mobx-react";
 import { ThemeProvider } from "styled-components";
 import Container from "./component/Container";
+import StartButton from "./component/StartButton";
 import useStores from "./useStores";
+import StartBackground from "./component/StartBackground";
 
 function useColorTheme() {
   const { rootStore } = useStores();
@@ -19,7 +21,8 @@ function App() {
   return (
     <ThemeProvider theme={colorTheme}>
       <Container>
-        <img src={goButtonSVG} alt="GO" />
+        <StartButton src={goButtonSVG} alt="GO" />
+        <StartBackground />
       </Container>
     </ThemeProvider>
   );
