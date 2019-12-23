@@ -4,7 +4,7 @@ import Header from "../component/Header";
 import cakeButton from "../asset/cake-button.svg";
 import Cake from "../component/Cake";
 import "../App.css";
-import CakeWarpper from "../component/CakeWarpper";
+import MakerWarpper from "../component/MakerWarpper";
 
 function CreatePage() {
   const { rootStore } = useStores();
@@ -23,7 +23,7 @@ function CreatePage() {
   return (
     <div>
       <Header />
-      <CakeWarpper>
+      <MakerWarpper>
         <Cake
           className={isJump ? "cake" : ""}
           src={cakeButton}
@@ -31,7 +31,7 @@ function CreatePage() {
           onClick={handleCakeClick}
           onAnimationEnd={handleAnimationFinished}
         />
-      </CakeWarpper>
+      </MakerWarpper>
     </div>
   );
 }
