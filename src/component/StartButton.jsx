@@ -9,7 +9,7 @@ export default styled.img`
   &:active {
     top: 77%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0.8);
+    transform: translate(-50%, -50%) scale(0.9);
     position: absolute;
     margin: 0;
   }
