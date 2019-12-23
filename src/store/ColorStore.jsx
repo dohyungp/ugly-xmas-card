@@ -15,7 +15,7 @@ export default class ColorStore {
 
   constructor(rootStore) {
     this.rootStore = rootStore;
-    if (!this.themeCode) {
+    if (!(this.themeCode + 1)) {
       const randCode = randInt(0, COUNT_OF_THEME - 1);
       this.themeCode = randCode;
       localStorage.setItem("themeCode", randCode);

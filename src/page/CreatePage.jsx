@@ -5,6 +5,7 @@ import cakeButton from "../asset/cake-button.svg";
 import Cake from "../component/Cake";
 import "../App.css";
 import MakerWarpper from "../component/MakerWarpper";
+import Sweater from "../component/Sweater";
 
 function CreatePage() {
   const { rootStore } = useStores();
@@ -24,6 +25,7 @@ function CreatePage() {
     <div>
       <Header />
       <MakerWarpper>
+        <Sweater />
         <Cake
           className={isJump ? "cake" : ""}
           src={cakeButton}
