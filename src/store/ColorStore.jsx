@@ -10,13 +10,13 @@ import blackThemeGoButton from "../asset/black-theme-go-button.svg";
 
 export default class ColorStore {
   @observable themeCode = parseInt(localStorage.getItem("themeCode"));
-  @observable sweaterCode = randInt(1, COUNT_OF_SWEATHER);
+  @observable sweaterCode = randInt(0, COUNT_OF_SWEATHER - 1);
   @observable isJump = false;
 
   constructor(rootStore) {
     this.rootStore = rootStore;
     if (!this.themeCode) {
-      const randCode = randInt(1, COUNT_OF_THEME);
+      const randCode = randInt(0, COUNT_OF_THEME - 1);
       this.themeCode = randCode;
       localStorage.setItem("themeCode", randCode);
     }
