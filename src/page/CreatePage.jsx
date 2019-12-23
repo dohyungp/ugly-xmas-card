@@ -3,10 +3,12 @@ import useStores from "../useStores";
 import { useObserver } from "mobx-react";
 import Header from "../component/Header";
 import cakeButton from "../asset/cake-button.svg";
+import catFaceButton from "../asset/cat-face-button.svg";
 import Cake from "../component/Cake";
 import "../App.css";
 import MakerWarpper from "../component/MakerWarpper";
 import Sweater from "../component/Sweater";
+import Face from "../component/Face";
 
 function useSweaterTheme() {
   const { rootStore } = useStores();
@@ -41,6 +43,7 @@ function CreatePage() {
       <Header />
       <MakerWarpper>
         <Sweater src={sweaterSVG} onClick={handleSweaterClick} />
+        <Face src={catFaceButton} />
         <Cake
           className={isJump ? "cake" : ""}
           src={cakeButton}
