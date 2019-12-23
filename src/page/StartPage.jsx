@@ -1,6 +1,5 @@
 import React from "react";
 import useStores from "../useStores";
-import { Link } from "react-router-dom";
 import { useObserver } from "mobx-react";
 import StartButton from "../component/StartButton";
 import StartBackground from "../component/StartBackground";
@@ -15,13 +14,14 @@ function useColorTheme() {
   }));
 }
 
-function StartPage() {
+function StartPage({ history }) {
   const { goButtonSVG } = useColorTheme();
+  const handleButtonClick = () => {
+    history.push("/create");
+  };
   return (
     <>
-      <Link to="/create">
-        <StartButton src={goButtonSVG} alt="GO" />
-      </Link>
+      <StartButton src={goButtonSVG} alt="GO" onClick={handleButtonClick} />
       <CatTV />
       <StartBackground />
     </>
