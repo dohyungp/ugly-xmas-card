@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import banner from "../asset/red-banner.svg";
 import ribon from "../asset/christmas-ribon.svg";
+import CreateBackground from "../component/CreateBackground";
 
 const Banner = styled.img`
   width: 100%;
@@ -41,13 +42,16 @@ const Text = styled.div`
 
 function Header() {
   return (
-    <HeaderWrapper>
-      <Banner src={banner} alt="banner" />
-      <RibonWrapper>
-        <Ribon src={ribon} alt="ribon" />
-        <Text>Happy Holidays!</Text>
-      </RibonWrapper>
-    </HeaderWrapper>
+    <>
+      <HeaderWrapper>
+        <Banner src={banner} alt="banner" />
+        <RibonWrapper>
+          <Ribon src={ribon} alt="ribon" />
+          <Text>Happy Holidays!</Text>
+        </RibonWrapper>
+      </HeaderWrapper>
+      <CreateBackground />
+    </>
   );
 }
 export default Header;

@@ -6,9 +6,12 @@ import cakeButton from "../asset/cake-button.svg";
 import catFaceButton from "../asset/cat-face-button.svg";
 import Cake from "../component/Cake";
 import "../App.css";
-import MakerWarpper from "../component/MakerWarpper";
+import leftArrow from "../asset/tap-arrow-left.svg";
+import rightArrow from "../asset/tap-arrow-right.svg";
 import Sweater from "../component/Sweater";
 import Face from "../component/Face";
+import LeftArrow from "../component/LeftArrow";
+import RightArrow from "../component/RightArrow";
 
 function useSweaterTheme() {
   const { rootStore } = useStores();
@@ -41,17 +44,15 @@ function CreatePage() {
   return (
     <div>
       <Header />
-      <MakerWarpper>
-        <Sweater src={sweaterSVG} onClick={handleSweaterClick} />
-        <Face src={catFaceButton} />
-        <Cake
-          className={isJump ? "cake" : ""}
-          src={cakeButton}
-          alt="cake"
-          onClick={handleCakeClick}
-          onAnimationEnd={handleAnimationFinished}
-        />
-      </MakerWarpper>
+      <Sweater src={sweaterSVG} onClick={handleSweaterClick} />
+      <Face src={catFaceButton} />
+      <Cake
+        className={isJump ? "cake" : ""}
+        src={cakeButton}
+        alt="cake"
+        onClick={handleCakeClick}
+        onAnimationEnd={handleAnimationFinished}
+      />
     </div>
   );
 }
