@@ -2,18 +2,19 @@ import React, { useState, useRef } from "react";
 import useStores from "../useStores";
 import { useObserver } from "mobx-react";
 import Header from "../component/Header";
+import CharacterWarpper from "../component/CharacterWarpper";
 import cakeButton from "../asset/cake-button.svg";
 import catFaceButton from "../asset/cat-face-button.svg";
 import Cake from "../component/Cake";
 import HiddenInput from "../component/HiddenInput";
 import "../App.css";
-// import leftArrow from "../asset/tap-arrow-left.svg";
-// import rightArrow from "../asset/tap-arrow-right.svg";
+import leftArrow from "../asset/tap-arrow-left.svg";
+import rightArrow from "../asset/tap-arrow-right.svg";
 import Sweater from "../component/Sweater";
 import Face from "../component/Face";
 import Compressor from "compressorjs";
-// import LeftArrow from "../component/LeftArrow";
-// import RightArrow from "../component/RightArrow";
+import LeftArrow from "../component/LeftArrow";
+import RightArrow from "../component/RightArrow";
 
 function useSweaterTheme() {
   const { rootStore } = useStores();
@@ -79,7 +80,7 @@ function CreatePage() {
         onChange={onImageChange}
       />
       <Header />
-      <div>
+      <CharacterWarpper>
         <Sweater src={sweaterSVG} onClick={handleSweaterClick} />
         <Face src={croppedImage || catFaceButton} onClick={handleFaceClick} />
         <Cake
@@ -89,7 +90,9 @@ function CreatePage() {
           onClick={handleCakeClick}
           onAnimationEnd={handleAnimationFinished}
         />
-      </div>
+        <LeftArrow src={leftArrow} />
+        <RightArrow src={rightArrow} />
+      </CharacterWarpper>
     </div>
   );
 }
