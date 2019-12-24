@@ -19,14 +19,15 @@ function useSweaterTheme() {
   const { colorStore } = rootStore;
 
   return useObserver(() => ({
-    sweaterSVG: colorStore.getSweaterSVG
+    sweaterSVG: colorStore.getSweaterSVG,
+    croppedImage: colorStore.croppedImage
   }));
 }
 
 function CreatePage() {
   const { rootStore } = useStores();
   const { colorStore } = rootStore;
-  const { sweaterSVG } = useSweaterTheme();
+  const { sweaterSVG, croppedImage } = useSweaterTheme();
   const [isJump, setJump] = useState(false);
   const inputEl = useRef(null);
 
@@ -74,15 +75,17 @@ function CreatePage() {
         onChange={onImageChange}
       />
       <Header />
-      <Sweater src={sweaterSVG} onClick={handleSweaterClick} />
-      <Face src={catFaceButton} onClick={handleFaceClick} />
-      <Cake
-        className={isJump ? "cake" : ""}
-        src={cakeButton}
-        alt="cake"
-        onClick={handleCakeClick}
-        onAnimationEnd={handleAnimationFinished}
-      />
+      <div>
+        <Sweater src={sweaterSVG} onClick={handleSweaterClick} />
+        <Face src={croppedImage || catFaceButton} onClick={handleFaceClick} />
+        <Cake
+          className={isJump ? "cake" : ""}
+          src={cakeButton}
+          alt="cake"
+          onClick={handleCakeClick}
+          onAnimationEnd={handleAnimationFinished}
+        />
+      </div>
     </div>
   );
 }

@@ -3,7 +3,8 @@ import { COUNT_OF_THEME, COUNT_OF_SWEATHER } from "../utils/constant";
 import {
   randInt,
   loadModels,
-  getFullFaceDescription
+  getFullFaceDescription,
+  cropImage
 } from "../utils/functions";
 import greenTheme from "../theme/green";
 import blackTheme from "../theme/black";
@@ -24,6 +25,7 @@ export default class ColorStore {
   @observable themeCode = parseInt(localStorage.getItem("themeCode"));
   @observable sweaterCode = parseInt(localStorage.getItem("sweaterCode"));
   @observable uploadedImage = null;
+  @observable croppedImage = null;
   @observable imgHeight = 0;
   @observable imgWidth = 0;
 
@@ -68,7 +70,7 @@ export default class ColorStore {
     });
 
     faceDescription.then(detection => {
-      console.log(detection);
+      this.croppedImage = cropImage(this.uploadedImage, detection);
     });
   });
 

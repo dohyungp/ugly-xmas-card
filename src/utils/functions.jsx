@@ -15,7 +15,7 @@ export async function loadModels() {
   });
 }
 
-export function loadOption(inputSize = 512, scoreThreshold = 0.2) {
+export function loadOption(inputSize = 512, scoreThreshold = 0.3) {
   return new faceapi.TinyFaceDetectorOptions({ inputSize, scoreThreshold });
 }
 
@@ -38,8 +38,7 @@ export async function getFullFaceDescription(blob, imageSize, inputSize = 512) {
 export function cropContour(ctx, pointset, isClosed = false) {
   const points = hull(pointset, 90, [".x", ".y"]);
   ctx.beginPath();
-  console.log(points);
-  points.slice(1).forEach(({ x, y }, prevIdx) => {
+  points.slice(1).forEach(({ x, y }) => {
     ctx.lineTo(x, y);
   });
 
@@ -57,4 +56,61 @@ export function cropContour(ctx, pointset, isClosed = false) {
   ctx.closePath();
   ctx.stroke();
   ctx.clip();
+}
+
+export function cropImage(imgEl, detection) {
+  const canvas = document.createElement("canvas");
+  canvas.width = imgEl.width;
+  canvas.height = imgEl.height;
+  canvas.getContext("2d").drawImage(imgEl, 0, 0, imgEl.width, imgEl.height);
+  let points = detection.landmarks
+    ? [
+        ...detection.landmarks.getJawOutline(),
+        ...detection.landmarks.getLeftEyeBrow(),
+        ...detection.landmarks.getRightEyeBrow()
+      ]
+    : [];
+
+  if (points.length === 0) return;
+
+  let minX = 10000,
+    minY = 10000,
+    maxX = -10000,
+    maxY = -10000;
+
+  points.forEach(point => {
+    if (point.x < minX) minX = point.x;
+    if (point.y < minY) minY = point.y;
+    if (point.x > maxX) maxX = point.x;
+    if (point.y > maxY) maxY = point.y;
+  });
+
+  const nWidth = maxX - minX,
+    nHeight = maxY - minY;
+
+  const ctx = canvas.getContext("2d");
+  ctx.save();
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.lineWidth = 2;
+  cropContour(ctx, points);
+  ctx.drawImage(imgEl, 0, 0);
+  ctx.restore();
+
+  const croppedCanvas = document.createElement("canvas");
+  const croppedCtx = croppedCanvas.getContext("2d");
+  croppedCanvas.width = nWidth;
+  croppedCanvas.height = nHeight;
+  croppedCtx.drawImage(
+    canvas,
+    minX,
+    minY,
+    nWidth,
+    nHeight,
+    0,
+    0,
+    nWidth,
+    nHeight
+  );
+
+  return croppedCanvas.toDataURL();
 }
