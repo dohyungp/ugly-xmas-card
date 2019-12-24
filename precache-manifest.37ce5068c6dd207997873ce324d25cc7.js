@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f6824a44b73e7309c3b8d0d31a3395fb",
+    "revision": "0abc4599f5f16b5ea7bd9e698bc3972d",
     "url": "/ugly-xmas-card/index.html"
   },
   {
-    "revision": "44b269f468348c8bfffd",
+    "revision": "13b6c442104493fc2e67",
     "url": "/ugly-xmas-card/static/css/main.c802caec.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ugly-xmas-card/static/js/2.8177a73d.chunk.js.LICENSE"
   },
   {
-    "revision": "44b269f468348c8bfffd",
-    "url": "/ugly-xmas-card/static/js/main.32954b60.chunk.js"
+    "revision": "13b6c442104493fc2e67",
+    "url": "/ugly-xmas-card/static/js/main.973414be.chunk.js"
   },
   {
     "revision": "2bd2cd4f4d9daba3a1ef",
