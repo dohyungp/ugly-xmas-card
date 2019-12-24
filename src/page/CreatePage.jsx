@@ -147,7 +147,9 @@ function CreatePage() {
           onChange={handleTextChange}
         />
       </TextAreaWrapper>
-      <ShareButton src={share} onClick={handleShareClick} />
+      <div style={{ position: "fixed" }}>
+        <ShareButton src={share} onClick={handleShareClick} />
+      </div>
     </div>
   );
 }
