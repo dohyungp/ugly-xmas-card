@@ -70,8 +70,6 @@ function CreatePage() {
         type="file"
         accept="image/*"
         ref={inputEl}
-        capture
-        style={{ display: "none" }}
         onChange={onImageChange}
       />
       <Header />
