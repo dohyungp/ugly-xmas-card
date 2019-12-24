@@ -1,5 +1,14 @@
 import * as faceapi from "face-api.js";
 import * as hull from "hull.js";
+import firebase from "firebase";
+import "firebase/storage";
+function uuidv4() {
+  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(c) {
+    var r = (Math.random() * 16) | 0,
+      v = c == "x" ? r : (r & 0x3) | 0x8;
+    return v.toString(16);
+  });
+}
 
 export function randInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -113,4 +122,9 @@ export function cropImage(imgEl, detection) {
   );
 
   return croppedCanvas.toDataURL();
+}
+
+export function uploadImage(blob) {
+  let storageRef = firebase.storage().ref();
+  return storageRef.child(`${uuidv4()}.png`).put(blob);
 }

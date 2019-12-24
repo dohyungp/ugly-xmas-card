@@ -12,6 +12,7 @@
     "customize-cra": "^0.9.1",
     "dom-to-image": "^2.6.0",
     "face-api.js": "^0.22.0",
+    "firebase": "^7.6.1",
     "hull.js": "^1.0.0",
     "mobx": "^5.15.1",
     "mobx-react": "^6.1.4",
