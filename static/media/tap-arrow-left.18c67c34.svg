@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="43" height="38" viewBox="0 0 43 38">
+    <g fill="#FFF" fill-rule="evenodd">
+        <text font-family="Roboto-Bold, Roboto" font-size="14" font-weight="bold" transform="translate(0 5)">
+            <tspan x="0" y="32.981">TAP</tspan>
+        </text>
+        <path fill-rule="nonzero" d="M36.202.505l6.24 7.9-9.991 1.231-.123-.992 7.215-.89L34.057 5.5l-.313.003c-6.701.15-14.777 6.812-17.69 13.86l-.924-.381c3.116-7.54 11.803-14.608 19.038-14.48l.18.037 5.575 2.29-4.506-5.704.785-.62z"/>
+    </g>
+</svg>

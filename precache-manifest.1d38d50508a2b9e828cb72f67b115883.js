@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b2b6b46e0f02d64fe0a11b1a4fae6695",
+    "revision": "c6898b335d4be976e6af9bb6cda04e60",
     "url": "/ugly-xmas-card/index.html"
   },
   {
-    "revision": "643e2209ef57d8d79aa1",
+    "revision": "1c48f339a49fc80a7447",
     "url": "/ugly-xmas-card/static/css/main.c802caec.chunk.css"
   },
   {
-    "revision": "e2aee6a7e91a4d8bfe8e",
-    "url": "/ugly-xmas-card/static/js/2.f5931299.chunk.js"
+    "revision": "2ee0316ecaeaf59467d6",
+    "url": "/ugly-xmas-card/static/js/2.61e40be1.chunk.js"
   },
   {
     "revision": "8358598ea8d1ff666678c00d4b7d78cb",
-    "url": "/ugly-xmas-card/static/js/2.f5931299.chunk.js.LICENSE"
+    "url": "/ugly-xmas-card/static/js/2.61e40be1.chunk.js.LICENSE"
   },
   {
-    "revision": "643e2209ef57d8d79aa1",
-    "url": "/ugly-xmas-card/static/js/main.15610c0c.chunk.js"
+    "revision": "1c48f339a49fc80a7447",
+    "url": "/ugly-xmas-card/static/js/main.71da186b.chunk.js"
   },
   {
     "revision": "2bd2cd4f4d9daba3a1ef",
@@ -86,6 +86,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "559e6bc3d369adeba18f903d84cae65c",
     "url": "/ugly-xmas-card/static/media/start-background.559e6bc3.png"
+  },
+  {
+    "revision": "18c67c34ab3389cd5bc48cdd64b8f7a7",
+    "url": "/ugly-xmas-card/static/media/tap-arrow-left.18c67c34.svg"
+  },
+  {
+    "revision": "3e1a03c5dd17189868c27510e636ca4a",
+    "url": "/ugly-xmas-card/static/media/tap-arrow-right.3e1a03c5.svg"
   },
   {
     "revision": "c96b37e5c3949cdbd7edefbbe636b0b0",
