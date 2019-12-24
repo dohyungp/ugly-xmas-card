@@ -25,7 +25,7 @@ export default styled.textarea`
   width: 80%;
   transform: translate(-50%, -50%);
   left: 50%;
-  height: 140px;
+  height: 130px;
   padding: 8px 10px;
   margin-top: 110px;
   position: absolute;
