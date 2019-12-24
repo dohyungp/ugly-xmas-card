@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/ugly-xmas-card/static/css/main.35589c84.chunk.css",
-    "main.js": "/ugly-xmas-card/static/js/main.3b076258.chunk.js",
-    "main.js.map": "/ugly-xmas-card/static/js/main.3b076258.chunk.js.map",
+    "main.css": "/ugly-xmas-card/static/css/main.c802caec.chunk.css",
+    "main.js": "/ugly-xmas-card/static/js/main.66b150a6.chunk.js",
+    "main.js.map": "/ugly-xmas-card/static/js/main.66b150a6.chunk.js.map",
     "runtime-main.js": "/ugly-xmas-card/static/js/runtime-main.880d8205.js",
     "runtime-main.js.map": "/ugly-xmas-card/static/js/runtime-main.880d8205.js.map",
     "static/js/2.91616cb6.chunk.js": "/ugly-xmas-card/static/js/2.91616cb6.chunk.js",
     "static/js/2.91616cb6.chunk.js.map": "/ugly-xmas-card/static/js/2.91616cb6.chunk.js.map",
     "index.html": "/ugly-xmas-card/index.html",
-    "precache-manifest.5fad6a5487f2c732ffdac7d20ff10010.js": "/ugly-xmas-card/precache-manifest.5fad6a5487f2c732ffdac7d20ff10010.js",
+    "precache-manifest.7b0fc2cde94b11d18993abe29d052657.js": "/ugly-xmas-card/precache-manifest.7b0fc2cde94b11d18993abe29d052657.js",
     "service-worker.js": "/ugly-xmas-card/service-worker.js",
-    "static/css/main.35589c84.chunk.css.map": "/ugly-xmas-card/static/css/main.35589c84.chunk.css.map",
+    "static/css/main.c802caec.chunk.css.map": "/ugly-xmas-card/static/css/main.c802caec.chunk.css.map",
     "static/js/2.91616cb6.chunk.js.LICENSE": "/ugly-xmas-card/static/js/2.91616cb6.chunk.js.LICENSE",
     "static/media/black-theme-go-button.svg": "/ugly-xmas-card/static/media/black-theme-go-button.c45f0e78.svg",
     "static/media/blue-rudolph.svg": "/ugly-xmas-card/static/media/blue-rudolph.97f9fdbe.svg",
@@ -39,7 +39,7 @@
   "entrypoints": [
     "static/js/runtime-main.880d8205.js",
     "static/js/2.91616cb6.chunk.js",
-    "static/css/main.35589c84.chunk.css",
-    "static/js/main.3b076258.chunk.js"
+    "static/css/main.c802caec.chunk.css",
+    "static/js/main.66b150a6.chunk.js"
   ]
 }
