@@ -19,7 +19,6 @@ import yellowAngola from "../asset/yellow-angola.svg";
 export default class ColorStore {
   @observable themeCode = parseInt(localStorage.getItem("themeCode"));
   @observable sweaterCode = parseInt(localStorage.getItem("sweaterCode"));
-  @observable isJump = false;
 
   constructor(rootStore) {
     this.rootStore = rootStore;
