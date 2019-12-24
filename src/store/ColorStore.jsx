@@ -1,6 +1,11 @@
 import { observable, action, computed } from "mobx";
 import { COUNT_OF_THEME, COUNT_OF_SWEATHER } from "../utils/constant";
-import { randInt } from "../utils/functions";
+import {
+  randInt,
+  loadModels,
+  getFullFaceDescription,
+  cropImage
+} from "../utils/functions";
 import greenTheme from "../theme/green";
 import blackTheme from "../theme/black";
 import purpleTheme from "../theme/purple";
@@ -19,10 +24,14 @@ import yellowAngola from "../asset/yellow-angola.svg";
 export default class ColorStore {
   @observable themeCode = parseInt(localStorage.getItem("themeCode"));
   @observable sweaterCode = parseInt(localStorage.getItem("sweaterCode"));
-  @observable isJump = false;
+  @observable uploadedImage = null;
+  @observable croppedImage = null;
+  @observable imgHeight = 0;
+  @observable imgWidth = 0;
 
   constructor(rootStore) {
     this.rootStore = rootStore;
+    loadModels();
     if (!(this.themeCode + 1)) {
       const randCode = randInt(0, COUNT_OF_THEME - 1);
       this.themeCode = randCode;
@@ -46,6 +55,23 @@ export default class ColorStore {
     this.themeCode = (this.themeCode + 1) % COUNT_OF_THEME;
     localStorage.removeItem("themeCode");
     localStorage.setItem("themeCode", this.themeCode);
+  });
+
+  uploadImage = action((image, height, width) => {
+    this.uploadedImage = image;
+    this.imgHeight = height;
+    this.imgWidth = width;
+  });
+
+  getFaceDescription = action(() => {
+    const faceDescription = getFullFaceDescription(this.uploadedImage.src, {
+      width: this.imgWidth,
+      height: this.imgHeight
+    });
+
+    faceDescription.then(detection => {
+      this.croppedImage = cropImage(this.uploadedImage, detection);
+    });
   });
 
   @computed

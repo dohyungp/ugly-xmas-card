@@ -19,14 +19,15 @@ function useSweaterTheme() {
   const { colorStore } = rootStore;
 
   return useObserver(() => ({
-    sweaterSVG: colorStore.getSweaterSVG
+    sweaterSVG: colorStore.getSweaterSVG,
+    croppedImage: colorStore.croppedImage
   }));
 }
 
 function CreatePage() {
   const { rootStore } = useStores();
   const { colorStore } = rootStore;
-  const { sweaterSVG } = useSweaterTheme();
+  const { sweaterSVG, croppedImage } = useSweaterTheme();
   const [isJump, setJump] = useState(false);
   const inputEl = useRef(null);
 
@@ -52,11 +53,12 @@ function CreatePage() {
     if (event.target.files && event.target.files[0]) {
       let reader = new FileReader();
       reader.onload = e => {
-        let imgEl = new Image();
-        imgEl.src = e.target.result;
-
-        console.log(e.target.result);
-        // this.setState({ image: e.target.result });
+        let imageEl = new Image();
+        imageEl.onload = () => {
+          colorStore.uploadImage(imageEl, imageEl.height, imageEl.width);
+          colorStore.getFaceDescription();
+        };
+        imageEl.src = e.target.result;
       };
       reader.readAsDataURL(event.target.files[0]);
     }
@@ -73,15 +75,17 @@ function CreatePage() {
         onChange={onImageChange}
       />
       <Header />
-      <Sweater src={sweaterSVG} onClick={handleSweaterClick} />
-      <Face src={catFaceButton} onClick={handleFaceClick} />
-      <Cake
-        className={isJump ? "cake" : ""}
-        src={cakeButton}
-        alt="cake"
-        onClick={handleCakeClick}
-        onAnimationEnd={handleAnimationFinished}
-      />
+      <div>
+        <Sweater src={sweaterSVG} onClick={handleSweaterClick} />
+        <Face src={croppedImage || catFaceButton} onClick={handleFaceClick} />
+        <Cake
+          className={isJump ? "cake" : ""}
+          src={cakeButton}
+          alt="cake"
+          onClick={handleCakeClick}
+          onAnimationEnd={handleAnimationFinished}
+        />
+      </div>
     </div>
   );
 }
