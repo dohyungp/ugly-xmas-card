@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^7.1.2",
     "compressorjs": "^1.0.6",
     "customize-cra": "^0.9.1",
+    "dom-to-image": "^2.6.0",
     "face-api.js": "^0.22.0",
     "hull.js": "^1.0.0",
     "mobx": "^5.15.1",

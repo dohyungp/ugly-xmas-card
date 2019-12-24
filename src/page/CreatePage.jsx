@@ -8,6 +8,7 @@ import catFaceButton from "../asset/cat-face-button.svg";
 import Cake from "../component/Cake";
 import HiddenInput from "../component/HiddenInput";
 import "../App.css";
+import share from "../asset/share.svg";
 import leftArrow from "../asset/tap-arrow-left.svg";
 import santaHat from "../asset/santa-hat.svg";
 import rightArrow from "../asset/tap-arrow-right.svg";
@@ -19,6 +20,9 @@ import RightArrow from "../component/RightArrow";
 import SantaHat from "../component/SantaHat";
 import TextArea from "../component/TextArea";
 import TextAreaWrapper from "../component/TextAreaWrapper";
+import ShareButton from "../component/ShareButton";
+import domtoimage from "dom-to-image";
+
 function useSweaterTheme() {
   const { rootStore } = useStores();
   const { colorStore } = rootStore;
@@ -34,7 +38,27 @@ function CreatePage() {
   const { colorStore } = rootStore;
   const { sweaterSVG, croppedImage } = useSweaterTheme();
   const [isJump, setJump] = useState(false);
+  const [text, setText] = useState("");
   const inputEl = useRef(null);
+
+  const socialShare = blob => {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: "Let's share your holiday card!",
+          text: text,
+          url: "https://dohyungp.github.io/ugly-xmas-card",
+          image: blob,
+          mimeType: "image/png"
+        })
+        .then(() => console.log("Successful share"))
+        .catch(error => console.log("Error sharing", error));
+    }
+  };
+
+  const handleTextChange = e => {
+    setText(e.target.value);
+  };
 
   const handleFaceClick = () => {
     const input = inputEl.current;
@@ -44,6 +68,18 @@ function CreatePage() {
   const handleCakeClick = () => {
     colorStore.updateThemeCode();
     setJump(true);
+  };
+
+  const handleShareClick = () => {
+    const node = document.body;
+    domtoimage
+      .toBlob(node)
+      .then(function(blob) {
+        socialShare(blob);
+      })
+      .catch(function(error) {
+        console.error("oops, something went wrong!", error);
+      });
   };
 
   const handleSweaterClick = () => {
@@ -98,8 +134,13 @@ function CreatePage() {
         {croppedImage ? <SantaHat src={santaHat} /> : ""}
       </CharacterWarpper>
       <TextAreaWrapper>
-        <TextArea placeholder="Please type ..." />
+        <TextArea
+          placeholder="Please type ..."
+          value={text}
+          onChange={handleTextChange}
+        />
       </TextAreaWrapper>
+      <ShareButton src={share} onClick={handleShareClick} />
     </div>
   );
 }
