@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export default styled.textarea`
   background-attachment: local;
+  letter-spacing: 3px;
+  line-height: 30px;
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
