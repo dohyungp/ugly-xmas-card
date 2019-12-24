@@ -9,13 +9,14 @@ import Cake from "../component/Cake";
 import HiddenInput from "../component/HiddenInput";
 import "../App.css";
 import leftArrow from "../asset/tap-arrow-left.svg";
+import santaHat from "../asset/santa-hat.svg";
 import rightArrow from "../asset/tap-arrow-right.svg";
 import Sweater from "../component/Sweater";
 import Face from "../component/Face";
 import Compressor from "compressorjs";
 import LeftArrow from "../component/LeftArrow";
 import RightArrow from "../component/RightArrow";
-
+import SantaHat from "../component/SantaHat";
 function useSweaterTheme() {
   const { rootStore } = useStores();
   const { colorStore } = rootStore;
@@ -92,6 +93,7 @@ function CreatePage() {
         />
         <LeftArrow src={leftArrow} />
         <RightArrow src={rightArrow} />
+        {croppedImage ? <SantaHat src={santaHat} /> : ""}
       </CharacterWarpper>
     </div>
   );
