@@ -22,6 +22,7 @@ import TextArea from "../component/TextArea";
 import TextAreaWrapper from "../component/TextAreaWrapper";
 import ShareButton from "../component/ShareButton";
 import domtoimage from "dom-to-image";
+import { uploadImage } from "../utils/functions";
 
 function useSweaterTheme() {
   const { rootStore } = useStores();
@@ -41,15 +42,16 @@ function CreatePage() {
   const [text, setText] = useState("");
   const inputEl = useRef(null);
 
-  const socialShare = blob => {
+  const socialShare = url => {
     if (navigator.share) {
       navigator
         .share({
           title: "Let's share your holiday card!",
-          text: text,
-          url: "https://dohyungp.github.io/ugly-xmas-card",
-          image: blob,
-          mimeType: "image/png"
+          text: `
+          holiday card! Link: ${url}
+          
+          ${text}`,
+          url: "https://dohyungp.github.io/ugly-xmas-card"
         })
         .then(() => console.log("Successful share"))
         .catch(error => console.log("Error sharing", error));
@@ -75,7 +77,12 @@ function CreatePage() {
     domtoimage
       .toBlob(node)
       .then(function(blob) {
-        socialShare(blob);
+        uploadImage(blob).then(snapshot => {
+          snapshot.ref.getDownloadURL().then(url => {
+            console.log(url);
+            socialShare(url);
+          });
+        });
       })
       .catch(function(error) {
         console.error("oops, something went wrong!", error);
