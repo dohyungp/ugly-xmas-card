@@ -9,6 +9,8 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "customize-cra": "^0.9.1",
+    "face-api.js": "^0.22.0",
+    "hull.js": "^1.0.0",
     "mobx": "^5.15.1",
     "mobx-react": "^6.1.4",
     "react": "^16.12.0",
