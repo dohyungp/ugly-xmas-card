@@ -52,11 +52,12 @@ function CreatePage() {
     if (event.target.files && event.target.files[0]) {
       let reader = new FileReader();
       reader.onload = e => {
-        let imgEl = new Image();
-        imgEl.src = e.target.result;
-
-        console.log(e.target.result);
-        // this.setState({ image: e.target.result });
+        let imageEl = new Image();
+        imageEl.onload = () => {
+          colorStore.uploadImage(imageEl, imageEl.height, imageEl.width);
+          colorStore.getFaceDescription();
+        };
+        imageEl.src = e.target.result;
       };
       reader.readAsDataURL(event.target.files[0]);
     }

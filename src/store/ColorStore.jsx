@@ -1,6 +1,10 @@
 import { observable, action, computed } from "mobx";
 import { COUNT_OF_THEME, COUNT_OF_SWEATHER } from "../utils/constant";
-import { randInt, loadModels } from "../utils/functions";
+import {
+  randInt,
+  loadModels,
+  getFullFaceDescription
+} from "../utils/functions";
 import greenTheme from "../theme/green";
 import blackTheme from "../theme/black";
 import purpleTheme from "../theme/purple";
@@ -19,6 +23,9 @@ import yellowAngola from "../asset/yellow-angola.svg";
 export default class ColorStore {
   @observable themeCode = parseInt(localStorage.getItem("themeCode"));
   @observable sweaterCode = parseInt(localStorage.getItem("sweaterCode"));
+  @observable uploadedImage = null;
+  @observable imgHeight = 0;
+  @observable imgWidth = 0;
 
   constructor(rootStore) {
     this.rootStore = rootStore;
@@ -46,6 +53,23 @@ export default class ColorStore {
     this.themeCode = (this.themeCode + 1) % COUNT_OF_THEME;
     localStorage.removeItem("themeCode");
     localStorage.setItem("themeCode", this.themeCode);
+  });
+
+  uploadImage = action((image, height, width) => {
+    this.uploadedImage = image;
+    this.imgHeight = height;
+    this.imgWidth = width;
+  });
+
+  getFaceDescription = action(() => {
+    const faceDescription = getFullFaceDescription(this.uploadedImage.src, {
+      width: this.imgWidth,
+      height: this.imgHeight
+    });
+
+    faceDescription.then(detection => {
+      console.log(detection);
+    });
   });
 
   @computed
