@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ugly-xmas-card/static/css/main.c802caec.chunk.css",
-    "main.js": "/ugly-xmas-card/static/js/main.3af8a344.chunk.js",
-    "main.js.map": "/ugly-xmas-card/static/js/main.3af8a344.chunk.js.map",
+    "main.js": "/ugly-xmas-card/static/js/main.b095aaee.chunk.js",
+    "main.js.map": "/ugly-xmas-card/static/js/main.b095aaee.chunk.js.map",
     "runtime-main.js": "/ugly-xmas-card/static/js/runtime-main.880d8205.js",
     "runtime-main.js.map": "/ugly-xmas-card/static/js/runtime-main.880d8205.js.map",
     "static/js/2.8177a73d.chunk.js": "/ugly-xmas-card/static/js/2.8177a73d.chunk.js",
     "static/js/2.8177a73d.chunk.js.map": "/ugly-xmas-card/static/js/2.8177a73d.chunk.js.map",
     "index.html": "/ugly-xmas-card/index.html",
-    "precache-manifest.f1f454011565294904b165c2aec31c31.js": "/ugly-xmas-card/precache-manifest.f1f454011565294904b165c2aec31c31.js",
+    "precache-manifest.e5b4f1d54b42d18b65c70e450e26c3f6.js": "/ugly-xmas-card/precache-manifest.e5b4f1d54b42d18b65c70e450e26c3f6.js",
     "service-worker.js": "/ugly-xmas-card/service-worker.js",
     "static/css/main.c802caec.chunk.css.map": "/ugly-xmas-card/static/css/main.c802caec.chunk.css.map",
     "static/js/2.8177a73d.chunk.js.LICENSE": "/ugly-xmas-card/static/js/2.8177a73d.chunk.js.LICENSE",
@@ -36,6 +36,6 @@
     "static/js/runtime-main.880d8205.js",
     "static/js/2.8177a73d.chunk.js",
     "static/css/main.c802caec.chunk.css",
-    "static/js/main.3af8a344.chunk.js"
+    "static/js/main.b095aaee.chunk.js"
   ]
 }
