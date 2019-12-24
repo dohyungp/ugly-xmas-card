@@ -6,6 +6,10 @@ import useStores from "./useStores";
 import StartPage from "./page/StartPage";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import CreatePage from "./page/CreatePage";
+import * as firebase from "firebase/app";
+import config from "./firebaseConfig";
+
+firebase.initializeApp(config);
 
 function useColorTheme() {
   const { rootStore } = useStores();
