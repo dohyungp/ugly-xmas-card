@@ -1,6 +1,6 @@
 import { observable, action, computed } from "mobx";
 import { COUNT_OF_THEME, COUNT_OF_SWEATHER } from "../utils/constant";
-import { randInt } from "../utils/functions";
+import { randInt, loadModels } from "../utils/functions";
 import greenTheme from "../theme/green";
 import blackTheme from "../theme/black";
 import purpleTheme from "../theme/purple";
@@ -23,6 +23,7 @@ export default class ColorStore {
 
   constructor(rootStore) {
     this.rootStore = rootStore;
+    loadModels();
     if (!(this.themeCode + 1)) {
       const randCode = randInt(0, COUNT_OF_THEME - 1);
       this.themeCode = randCode;
