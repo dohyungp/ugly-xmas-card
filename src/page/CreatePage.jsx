@@ -139,15 +139,15 @@ function CreatePage() {
         <LeftArrow src={leftArrow} />
         <RightArrow src={rightArrow} />
         {croppedImage ? <SantaHat src={santaHat} /> : ""}
-        <TextAreaWrapper>
-          <TextArea
-            placeholder="Please type ..."
-            value={text}
-            onChange={handleTextChange}
-          />
-        </TextAreaWrapper>
-        <ShareButton src={share} onClick={handleShareClick} />
       </CharacterWarpper>
+      <TextAreaWrapper>
+        <TextArea
+          placeholder="Please type ..."
+          value={text}
+          onChange={handleTextChange}
+        />
+      </TextAreaWrapper>
+      <ShareButton src={share} onClick={handleShareClick} />
     </div>
   );
 }

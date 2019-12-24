@@ -28,7 +28,7 @@ export default styled.textarea`
   height: 130px;
   padding: 8px 10px;
   margin-top: 110px;
-  position: absolute;
+  position: fixed;
   outline: none;
   border: none;
   resize: none;
