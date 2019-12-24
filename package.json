@@ -8,6 +8,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "compressorjs": "^1.0.6",
     "customize-cra": "^0.9.1",
     "face-api.js": "^0.22.0",
     "hull.js": "^1.0.0",

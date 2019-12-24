@@ -11,6 +11,7 @@ import "../App.css";
 // import rightArrow from "../asset/tap-arrow-right.svg";
 import Sweater from "../component/Sweater";
 import Face from "../component/Face";
+import Compressor from "compressorjs";
 // import LeftArrow from "../component/LeftArrow";
 // import RightArrow from "../component/RightArrow";
 
@@ -60,7 +61,12 @@ function CreatePage() {
         };
         imageEl.src = e.target.result;
       };
-      reader.readAsDataURL(event.target.files[0]);
+      new Compressor(event.target.files[0], {
+        quality: 0.5,
+        success(result) {
+          reader.readAsDataURL(result);
+        }
+      });
     }
   };
 
