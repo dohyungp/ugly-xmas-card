@@ -6,6 +6,8 @@ export default styled.img`
   text-align: center;
   justify-content: center;
   transform: translate(-50%, -50%);
+  max-width: 128px;
+  max-height: 144px;
   left: 50%;
   top: 56%;
 `;
