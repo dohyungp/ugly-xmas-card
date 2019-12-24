@@ -36,7 +36,7 @@ export async function getFullFaceDescription(blob, imageSize, inputSize = 512) {
 }
 
 export function cropContour(ctx, pointset, isClosed = false) {
-  const points = hull(pointset, 90, [".x", ".y"]);
+  const points = hull(pointset, 300, [".x", ".y"]);
   ctx.beginPath();
   points.slice(1).forEach(({ x, y }) => {
     ctx.lineTo(x, y);
@@ -91,7 +91,7 @@ export function cropImage(imgEl, detection) {
   const ctx = canvas.getContext("2d");
   ctx.save();
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.lineWidth = 2;
+  ctx.lineWidth = 4;
   cropContour(ctx, points);
   ctx.drawImage(imgEl, 0, 0);
   ctx.restore();
