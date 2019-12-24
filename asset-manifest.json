@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/ugly-xmas-card/static/css/main.c802caec.chunk.css",
-    "main.js": "/ugly-xmas-card/static/js/main.b095aaee.chunk.js",
-    "main.js.map": "/ugly-xmas-card/static/js/main.b095aaee.chunk.js.map",
+    "main.js": "/ugly-xmas-card/static/js/main.6c22dd7b.chunk.js",
+    "main.js.map": "/ugly-xmas-card/static/js/main.6c22dd7b.chunk.js.map",
     "runtime-main.js": "/ugly-xmas-card/static/js/runtime-main.880d8205.js",
     "runtime-main.js.map": "/ugly-xmas-card/static/js/runtime-main.880d8205.js.map",
-    "static/js/2.8177a73d.chunk.js": "/ugly-xmas-card/static/js/2.8177a73d.chunk.js",
-    "static/js/2.8177a73d.chunk.js.map": "/ugly-xmas-card/static/js/2.8177a73d.chunk.js.map",
+    "static/js/2.f5931299.chunk.js": "/ugly-xmas-card/static/js/2.f5931299.chunk.js",
+    "static/js/2.f5931299.chunk.js.map": "/ugly-xmas-card/static/js/2.f5931299.chunk.js.map",
     "index.html": "/ugly-xmas-card/index.html",
-    "precache-manifest.e5b4f1d54b42d18b65c70e450e26c3f6.js": "/ugly-xmas-card/precache-manifest.e5b4f1d54b42d18b65c70e450e26c3f6.js",
+    "precache-manifest.4799c14add16450e669289bd786cc967.js": "/ugly-xmas-card/precache-manifest.4799c14add16450e669289bd786cc967.js",
     "service-worker.js": "/ugly-xmas-card/service-worker.js",
     "static/css/main.c802caec.chunk.css.map": "/ugly-xmas-card/static/css/main.c802caec.chunk.css.map",
-    "static/js/2.8177a73d.chunk.js.LICENSE": "/ugly-xmas-card/static/js/2.8177a73d.chunk.js.LICENSE",
+    "static/js/2.f5931299.chunk.js.LICENSE": "/ugly-xmas-card/static/js/2.f5931299.chunk.js.LICENSE",
     "static/media/black-theme-go-button.svg": "/ugly-xmas-card/static/media/black-theme-go-button.c45f0e78.svg",
     "static/media/blue-rudolph.svg": "/ugly-xmas-card/static/media/blue-rudolph.97f9fdbe.svg",
     "static/media/cake-button.svg": "/ugly-xmas-card/static/media/cake-button.6d50bd03.svg",
@@ -34,8 +34,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.880d8205.js",
-    "static/js/2.8177a73d.chunk.js",
+    "static/js/2.f5931299.chunk.js",
     "static/css/main.c802caec.chunk.css",
-    "static/js/main.b095aaee.chunk.js"
+    "static/js/main.6c22dd7b.chunk.js"
   ]
 }
