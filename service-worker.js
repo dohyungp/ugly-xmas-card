@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ugly-xmas-card/precache-manifest.d2f4e616d0f6780fc2aa571e85f4b28e.js"
+  "/ugly-xmas-card/precache-manifest.e7b15a2efe13a38c746a7508f286c51a.js"
 );
 
 self.addEventListener('message', (event) => {
