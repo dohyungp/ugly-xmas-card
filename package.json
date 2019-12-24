@@ -41,5 +41,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://dohyungp.github.io/ugly-xmas-card"
+  "homepage": "https://dohyungp.github.io/ugly-xmas-card",
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
+  }
 }
