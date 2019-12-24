@@ -9,5 +9,5 @@ export default styled.img`
   max-width: 128px;
   max-height: 144px;
   left: 50%;
-  top: 56%;
+  top: 65%;
 `;
