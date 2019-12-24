@@ -17,6 +17,8 @@ import Compressor from "compressorjs";
 import LeftArrow from "../component/LeftArrow";
 import RightArrow from "../component/RightArrow";
 import SantaHat from "../component/SantaHat";
+import TextArea from "../component/TextArea";
+import TextAreaWrapper from "../component/TextAreaWrapper";
 function useSweaterTheme() {
   const { rootStore } = useStores();
   const { colorStore } = rootStore;
@@ -95,6 +97,9 @@ function CreatePage() {
         <RightArrow src={rightArrow} />
         {croppedImage ? <SantaHat src={santaHat} /> : ""}
       </CharacterWarpper>
+      <TextAreaWrapper>
+        <TextArea placeholder="Please type ..." />
+      </TextAreaWrapper>
     </div>
   );
 }
