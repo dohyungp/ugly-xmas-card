@@ -62,7 +62,7 @@ function CreatePage() {
         imageEl.src = e.target.result;
       };
       new Compressor(event.target.files[0], {
-        quality: 0.5,
+        quality: 0.3,
         success(result) {
           reader.readAsDataURL(result);
         }
