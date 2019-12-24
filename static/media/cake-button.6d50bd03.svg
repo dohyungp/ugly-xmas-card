@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="82" height="73" viewBox="0 0 82 73" preserveAspectRatio="none">
+    <g fill="none" fill-rule="evenodd" transform="translate(-3)">
+        <ellipse cx="47" cy="56.5" fill="#451156" rx="31" ry="15.5" transform="rotate(-10 47 56.5)"/>
+        <ellipse cx="44" cy="45.5" fill="#A42ACD" rx="41" ry="20.5" transform="rotate(-10 44 45.5)"/>
+        <path stroke="#850808" stroke-linecap="round" stroke-width="8" d="M20.025 27.828l42-1.73"/>
+        <path stroke="#FFF" stroke-linecap="round" stroke-width="8" d="M20.025 37.811l42-1.729"/>
+        <path stroke="#850808" stroke-linecap="round" stroke-width="8" d="M22.025 47.811l42-1.729"/>
+        <path fill="#FFF" d="M47.91 1.15L17 23.099l46.847-3.19L50.692 1.613a2 2 0 0 0-2.782-.463z"/>
+        <circle cx="41.5" cy="8.5" r="6.5" fill="#4B2D06" stroke="#C06311" stroke-width="2"/>
+        <circle cx="14.5" cy="58.5" r="2.5" fill="#F5AE4D"/>
+        <circle cx="23.5" cy="61.5" r="2.5" fill="#F5AE4D"/>
+        <circle cx="32.5" cy="61.5" r="2.5" fill="#F5AE4D"/>
+        <circle cx="43.5" cy="61.5" r="2.5" fill="#F5AE4D"/>
+        <circle cx="52.5" cy="59.5" r="2.5" fill="#F5AE4D"/>
+        <circle cx="62.5" cy="56.5" r="2.5" fill="#F5AE4D"/>
+        <circle cx="71.5" cy="51.5" r="2.5" fill="#F5AE4D"/>
+        <circle cx="78.5" cy="43.5" r="2.5" fill="#F5AE4D"/>
+        <circle cx="76.5" cy="35.5" r="2.5" fill="#F5AE4D"/>
+        <circle cx="68.5" cy="30.5" r="2.5" fill="#F5AE4D"/>
+        <circle cx="12.5" cy="43.5" r="2.5" fill="#F5AE4D"/>
+        <circle cx="7.5" cy="51.5" r="2.5" fill="#F5AE4D"/>
+    </g>
+</svg>
