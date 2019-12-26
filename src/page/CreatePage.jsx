@@ -118,7 +118,7 @@ function CreatePage() {
   };
 
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <HiddenInput
         type="file"
         accept="image/*"
